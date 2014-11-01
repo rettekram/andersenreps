@@ -1,0 +1,12 @@
+name = Staff member
+core = 7.x
+package = Features
+dependencies[] = andersenreps_fields
+dependencies[] = features
+dependencies[] = image
+dependencies[] = text
+features[features_api][] = api:2
+features[field_instance][] = node-staff_member-body
+features[field_instance][] = node-staff_member-field_staff_job_titles
+features[field_instance][] = node-staff_member-field_staff_photo
+features[node][] = staff_member

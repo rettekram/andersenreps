@@ -1,0 +1,13 @@
+name = Slideshow
+core = 7.x
+package = Features
+dependencies[] = andersenreps_fields
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = image
+dependencies[] = text
+features[features_api][] = api:2
+features[field_instance][] = node-slideshow-body
+features[field_instance][] = node-slideshow-field_sideshow_image
+features[field_instance][] = node-slideshow-field_slideshow_entityref
+features[node][] = slideshow

@@ -1,0 +1,14 @@
+name = Artist
+core = 7.x
+package = Features
+dependencies[] = andersenreps_fields
+dependencies[] = features
+dependencies[] = image
+dependencies[] = link
+dependencies[] = text
+features[features_api][] = api:2
+features[field_instance][] = node-artist-body
+features[field_instance][] = node-artist-field_artist_photo
+features[field_instance][] = node-artist-field_artist_subtitle
+features[field_instance][] = node-artist-field_artist_website_link
+features[node][] = artist

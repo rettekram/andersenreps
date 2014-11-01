@@ -1,0 +1,12 @@
+name = Basic page
+core = 7.x
+package = Features
+dependencies[] = andersenreps_fields
+dependencies[] = features
+dependencies[] = options
+dependencies[] = text
+features[features_api][] = api:2
+features[field_instance][] = node-page-body
+features[field_instance][] = node-page-field_additional_content
+features[field_instance][] = node-page-field_display_artist_roster
+features[node][] = page
