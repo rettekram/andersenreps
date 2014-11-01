@@ -10,7 +10,7 @@
 @import "normalize.css";
 
 /* Layout rules */
-@import "layouts/responsive.css";
+@import "layouts/fixed.css";
 
 /* Component (SMACSS module) rules */
 @import "components/misc.css";
@@ -18,5 +18,4 @@
 @import "print.css";
 
 /* SMACSS theme rules */
-/* @import "theme-A.css"; */
-/* @import "theme-B.css"; */
+@import "main.css";

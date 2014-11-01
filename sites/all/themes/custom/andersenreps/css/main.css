@@ -1,0 +1,71 @@
+/*
+ * HTML Elements
+ * 
+ */
+body {
+    margin: 0;
+    padding: 0;
+    font: 13px/1.231 verdana, arial, sans-serif; 
+    font-size: small; 
+    color: #fff;
+    background: #5a0406;
+}
+input, select, label, textarea, button {
+    font-size: 0.9em;
+    font-family: verdana, arial, sans-serif;
+}
+input[type=text], input[type=password], input[type=email], textarea {
+    padding: 2px;
+    margin: 0;
+    border: none;
+}
+    input.inactive {
+    color: #aaa;
+}
+a:link, a:visited {
+    color: #f7cf81;
+    text-decoration: none;
+}
+a:link:hover, a:visited:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+#zd-content1 a:link, #zd-content1 a:visited {
+    text-decoration: underline;
+}
+p {
+    margin: 0.8em 0 0.8em 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0.8em 0;
+    font-family: helvetica, arial, sans-serif;
+    color: #fff;
+}
+#page-title, #zd-content1 h1, #content2 h1, #zd-content2 h1 {
+    margin-top: 0;
+    font-size: 2em;
+    font-weight: normal;
+    padding: 0.6em 0;
+    margin: 0;
+}
+h2 {
+    font-size: 1.3em;
+}
+img {
+    border: none;
+    -ms-interpolation-mode: bicubic;
+}
+img.right, img.left {
+    margin: 10px;
+}
+hr {
+    border: none;
+    border-top: 4px solid #87191a;
+    margin: 2em 0;
+    padding: 0;
+}
+
+
+
+
