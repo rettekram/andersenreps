@@ -8,7 +8,7 @@ body {
     font: 13px/1.231 verdana, arial, sans-serif; 
     font-size: small; 
     color: #fff;
-    background: #5a0406;
+    background: #5a0406 url("../images/bg.jpg") top center no-repeat;
 }
 input, select, label, textarea, button {
     font-size: 0.9em;
@@ -66,6 +66,116 @@ hr {
     padding: 0;
 }
 
+/*
+ * Layout Styles
+ * 
+ */
+body.admin-menu {
+	background-position: 50% 29px;
+}
+
+#navigation {
+	height: 55px;
+}
+
+#main {
+	padding-top: 55px;
+}
+
+#logo-wrapper {
+	clear: both;
+	position: relative;
+	height: 230px;
+}
+#logo-wrapper #logo {
+	position: relative;
+	top: 60px;
+}
+
+.sidebar-second #content {
+	width: 560px;
+}
+.sidebar-second .region-sidebar-second {
+	width: 440px;
+	margin-left: 581px;
+}
+
+#copyright {
+	font-size: 0.85em;
+	color: #fee;
+	border-top: 4px solid #87191a;
+	text-align: center;
+	margin-top: 20px;
+	padding: 30px 0 80px 0;
+}
+
+
+/*
+ * Navigtation Styles
+ * 
+ */
+#navigation .block-menu-block {
+}
+ 
+#navigation .block-menu-block li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#navigation .block-menu-block li {
+	float: left;
+	margin: 0 0 0 2px;
+}
+
+#navigation .block-menu-block li a {
+	display: block;
+	padding: 16px 12px 0px 12px;
+	height: 29px;
+	color: #fff;
+	font-size: 1.4em;
+	text-transform: uppercase;
+	font-family: helvetica, arial;
+}
+#navigation .block-menu-block li a:hover{
+	text-decoration: none;
+}
+#navigation .block-menu-block li:hover{
+	border-bottom: 10px solid #fff;
+}
+#navigation .block-menu-block li.is-active {
+	border-bottom: 10px solid #87191a;
+}
+
+#navigation .block-menu-block li:hover ul {
+	display: block;
+}
+#navigation .block-menu-block ul ul {
+	display: none;
+	position: absolute;
+	margin: 0px 0 0 0;
+	padding: 5px 0 5px 0;
+	width: 150px;
+}
+#navigation .block-menu-block ul ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+#navigation .block-menu-block ul ul li:hover {
+	border: none;
+	background: none;
+}
+#navigation .block-menu-block ul ul li a {
+	margin: 0;
+	padding: 7px 0 7px 12px;
+	font-size: 1.1em;
+	background: transparent;
+	height: auto;
+	color: #fff;
+}
+#navigation .block-menu-block ul ul li a:hover {
+	text-decoration: underline;
+}
 
 
 
