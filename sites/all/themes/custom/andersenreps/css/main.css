@@ -204,8 +204,6 @@ table.views-view-grid.cols-2 td {
  * 
  */
 
-
-
 /* roster list */
 .view-artist-roster td {
 	padding: 0 10px 10px 0;
@@ -247,8 +245,13 @@ table.views-view-grid.cols-2 td {
 }
 
 
-
-
+/*
+ * Slideshow Styles (Fields/Views/Panels)
+ * 
+ */
+.views_slideshow_cycle_main {
+	padding-top: 40px;
+}
 
 
 

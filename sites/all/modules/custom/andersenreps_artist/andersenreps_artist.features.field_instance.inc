@@ -63,7 +63,7 @@ function andersenreps_artist_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'medium',
+          'image_style' => 'artist_page',
         ),
         'type' => 'image',
         'weight' => 1,

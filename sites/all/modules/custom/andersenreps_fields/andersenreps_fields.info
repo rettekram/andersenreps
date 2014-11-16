@@ -16,7 +16,6 @@ features[field_base][] = field_artist_subtitle
 features[field_base][] = field_artist_website_link
 features[field_base][] = field_display_artist_roster
 features[field_base][] = field_sideshow_image
-features[field_base][] = field_slideshow_entityref
 features[field_base][] = field_staff_job_titles
 features[field_base][] = field_staff_photo
 features[field_base][] = field_webform_contact
