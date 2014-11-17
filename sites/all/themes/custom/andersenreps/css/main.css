@@ -183,6 +183,26 @@ body.admin-menu {
 
 
 /*
+ * Webform Styles
+ * 
+ */
+.node-type-webform {
+}
+.node-type-webform .webform-client-form {
+	background: #3a0000;
+	padding: 20px;
+}
+
+/* inline form elements */
+.node-type-webform .webform-container-inline label {
+	width: 200px;
+}
+.node-type-webform .webform-container-inline input {
+	width: 350px;
+}
+
+
+/*
  * Views Displays
  * 
  */
