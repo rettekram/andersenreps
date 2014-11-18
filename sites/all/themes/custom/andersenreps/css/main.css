@@ -107,6 +107,19 @@ body.admin-menu {
 	padding: 30px 0 80px 0;
 }
 
+.tabs-primary__tab {
+	text-shadow: none;
+}
+#content a.tabs-primary__tab-link:link,
+#content a.tabs-primary__tab-link:visited {
+	background-color: #3a0000;
+	text-decoration: none;
+}
+#content a.tabs-primary__tab-link:active,
+#content a.tabs-primary__tab-link.is-active {
+	background-color: #aaa;
+}
+
 
 /*
  * Navigtation Styles
@@ -198,27 +211,50 @@ body.admin-menu {
 .node-type-webform .form-item {
 	margin: 4px 0;
 }
+.node-type-webform label {
+	font-weight: normal;
+}
 
 /* inline form elements */
+.node-type-webform .webform-container-inline {
+	clear: both;
+	margin-bottom: 10px;
+}
 .node-type-webform .webform-container-inline label {
-	width: 160px;
+	width: 200px;
 	display: inline-block;
 }
-.node-type-webform .webform-container-inline input {
-	width: 340px;
+.node-type-webform .webform-container-inline input.form-text {
+	width: 200px;
+}
+.node-type-webform .webform-container-inline.webform-component-checkboxes label {
+	float: left;
+	margin-right: 15px;
+}
+.node-type-webform .webform-container-inline .form-checkboxes {
+	float: left;
+}
+.node-type-webform .webform-container-inline .form-checkboxes label {
+	float: none;
+}
+.node-type-webform .webform-container-inline .form-type-checkbox {
+	display: block !important;
+}
+.node-type-webform .webform-container-inline.webform-component-date {
+	padding-top: 10px;
 }
 
 /* name field */
 .node-type-webform .form-type-name-element label {
 	float: left;
-	width: 163px;
+	width: 204px;
 	margin-right: 1em;
 }
 .node-type-webform .form-type-name-element .form-item {
-	margin-top: 0;
+	margin: 0;
 }
 .node-type-webform .form-type-name-element .form-item input {
-	width: 164px;
+	width: 140px;
 }
 .node-type-webform .form-type-name-element .name-family-wrapper {
 	margin-right: 0 !important;
