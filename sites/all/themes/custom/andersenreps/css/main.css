@@ -3,26 +3,29 @@
  * 
  */
 body {
-    margin: 0;
-    padding: 0;
-    font: 13px/1.231 verdana, arial, sans-serif; 
-    font-size: small; 
-    color: #fff;
-    background: #5a0406 url("../images/bg.jpg") top center no-repeat;
+	margin: 0;
+	padding: 0;
+	font: 13px/1.231 verdana, arial, sans-serif; 
+	font-size: small; 
+	color: #fff;
+	background: #5a0406 url("../images/bg.jpg") top center no-repeat;
 }
+
 input, select, label, textarea, button {
-    font-size: 0.9em;
-    font-family: verdana, arial, sans-serif;
+	font-size: 0.9em;
+	font-family: verdana, arial, sans-serif;
 }
-input[type=text], input[type=password], input[type=email], textarea {
-    padding: 2px;
-    margin: 0;
-    border: none;
+input[type="text"], 
+input[type="password"], 
+input[type="email"], 
+textarea {
+	padding: 2px;
+	margin: 0;
+	border: none;
 }
-    input.inactive {
-    color: #aaa;
-}
-a:link, a:visited {
+
+a:link,
+a:visited {
 	color: #f7cf81;
 	text-decoration: none;
 }
@@ -192,13 +195,33 @@ body.admin-menu {
 	background: #3a0000;
 	padding: 20px;
 }
+.node-type-webform .form-item {
+	margin: 4px 0;
+}
 
 /* inline form elements */
 .node-type-webform .webform-container-inline label {
-	width: 200px;
+	width: 160px;
+	display: inline-block;
 }
 .node-type-webform .webform-container-inline input {
-	width: 350px;
+	width: 340px;
+}
+
+/* name field */
+.node-type-webform .form-type-name-element label {
+	float: left;
+	width: 163px;
+	margin-right: 1em;
+}
+.node-type-webform .form-type-name-element .form-item {
+	margin-top: 0;
+}
+.node-type-webform .form-type-name-element .form-item input {
+	width: 164px;
+}
+.node-type-webform .form-type-name-element .name-family-wrapper {
+	margin-right: 0 !important;
 }
 
 
@@ -272,14 +295,6 @@ table.views-view-grid.cols-2 td {
 .views_slideshow_cycle_main {
 	padding-top: 40px;
 }
-
-
-
-
-
-
-
-
 
 
 
