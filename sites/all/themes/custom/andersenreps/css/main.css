@@ -333,4 +333,25 @@ table.views-view-grid.cols-2 td {
 }
 
 
+/*
+ * Staff Member Styles (Fields/Views/Panels)
+ * 
+ */
+
+/* our team list */
+.view-our-team td {
+	padding: 0 10px 10px 0;
+}
+.view-our-team tr.row-last td {
+	padding: 0 10px 0 0;
+}
+.view-our-team .views-field-field-staff-photo {
+	float: left;
+	margin-right: 10px;
+}
+.view-our-team .views-field-title {
+	font-weight: bold;
+}
+
+
 
