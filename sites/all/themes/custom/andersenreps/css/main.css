@@ -122,7 +122,7 @@ body.admin-menu {
 
 
 /*
- * Navigtation Styles
+ * Navigtation Region Styles
  * 
  */
 #navigation {
@@ -195,6 +195,14 @@ body.admin-menu {
 }
 #navigation .block-menu-block ul ul li a:hover {
 	text-decoration: underline;
+}
+
+/* social media widget */
+#block-widgets-s-socialmedia-profile-buttons {
+	float: right;
+}
+.block-widgets  .widgets-element {
+	padding: 30px 0px 0px 6px;
 }
 
 
@@ -330,6 +338,27 @@ table.views-view-grid.cols-2 td {
  */
 .views_slideshow_cycle_main {
 	padding-top: 40px;
+}
+
+
+/*
+ * Staff Member Styles (Fields/Views/Panels)
+ * 
+ */
+
+/* our team list */
+.view-our-team td {
+	padding: 0 10px 10px 0;
+}
+.view-our-team tr.row-last td {
+	padding: 0 10px 0 0;
+}
+.view-our-team .views-field-field-staff-photo {
+	float: left;
+	margin-right: 10px;
+}
+.view-our-team .views-field-title {
+	font-weight: bold;
 }
 
 
