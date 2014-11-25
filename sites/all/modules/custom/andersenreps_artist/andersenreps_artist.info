@@ -31,4 +31,4 @@ features_exclude[field_base][body] = body
 features_exclude[field_base][field_artist_photo] = field_artist_photo
 features_exclude[field_base][field_artist_subtitle] = field_artist_subtitle
 features_exclude[field_base][field_artist_website_link] = field_artist_website_link
-mtime = 1416282699
+mtime = 1416863118
