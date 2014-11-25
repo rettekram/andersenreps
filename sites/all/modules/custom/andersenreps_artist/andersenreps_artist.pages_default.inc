@@ -111,7 +111,18 @@ function andersenreps_artist_default_page_manager_handlers() {
     $pane->type = 'views_panes';
     $pane->subtype = 'artist_roster-panel_pane_2';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'perm',
+          'settings' => array(
+            'perm' => 'access draggableviews',
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(

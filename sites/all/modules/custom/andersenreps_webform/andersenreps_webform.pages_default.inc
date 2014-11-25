@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * andersenreps_panels.pages_default.inc
+ * andersenreps_webform.pages_default.inc
  */
 
 /**
  * Implements hook_default_page_manager_handlers().
  */
-function andersenreps_panels_default_page_manager_handlers() {
+function andersenreps_webform_default_page_manager_handlers() {
   $export = array();
 
   $handler = new stdClass();

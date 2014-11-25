@@ -340,7 +340,7 @@ function andersenreps_artist_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Images */
+  /* Field: Content: Slideshow images */
   $handler->display->display_options['fields']['field_sideshow_image']['id'] = 'field_sideshow_image';
   $handler->display->display_options['fields']['field_sideshow_image']['table'] = 'field_data_field_sideshow_image';
   $handler->display->display_options['fields']['field_sideshow_image']['field'] = 'field_sideshow_image';
