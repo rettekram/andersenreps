@@ -251,6 +251,9 @@ body.admin-menu {
 .node-type-webform .webform-container-inline.webform-component-date {
 	padding-top: 10px;
 }
+.node-type-webform .webform-container-inline.webform-component-textarea label {
+	margin-bottom: 4px;
+}
 
 /* name field */
 .node-type-webform .form-type-name-element label {
@@ -266,6 +269,27 @@ body.admin-menu {
 }
 .node-type-webform .form-type-name-element .name-family-wrapper {
 	margin-right: 0 !important;
+}
+
+/* mollom styles */
+.form-item-mollom-captcha label {
+	margin-bottom: 4px;
+}
+.mollom-refresh-image {
+	float: left;
+	background-color: #fff;
+}
+.mollom-image-captcha {
+	float: left;
+}
+.mollom-image-captcha-instructions {
+	float: left;
+	width: 300px;
+	margin: 0 0 0 32px;
+}
+#edit-mollom-captcha {
+	width: 200px;
+	margin: 10px 0 10px 212px;
 }
 
 
