@@ -12,10 +12,10 @@ function andersenreps_artist_views_default_views() {
 
   $view = new view();
   $view->name = 'artist_roster';
-  $view->description = 'A listing of artists.';
+  $view->description = 'Listing and sorting displays for artists and staff members.';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Artist Roster';
+  $view->human_name = 'Profile Rosters';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -150,8 +150,8 @@ function andersenreps_artist_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'artist_roster:panel_pane_2';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: Artist pane */
+  $handler = $view->new_display('panel_pane', 'Artist pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -203,8 +203,8 @@ function andersenreps_artist_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'artist_roster:panel_pane_2';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
 
-  /* Display: Sorting pane */
-  $handler = $view->new_display('panel_pane', 'Sorting pane', 'panel_pane_2');
+  /* Display: Sorting pane for Artists */
+  $handler = $view->new_display('panel_pane', 'Sorting pane for Artists', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Reorder Artists';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -282,6 +282,171 @@ function andersenreps_artist_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+
+  /* Display: Staff pane */
+  $handler = $view->new_display('panel_pane', 'Staff pane', 'panel_pane_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Our team of dedicated professionals will strive to make your event an unconditional success.';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Photo */
+  $handler->display->display_options['fields']['field_staff_photo']['id'] = 'field_staff_photo';
+  $handler->display->display_options['fields']['field_staff_photo']['table'] = 'field_data_field_staff_photo';
+  $handler->display->display_options['fields']['field_staff_photo']['field'] = 'field_staff_photo';
+  $handler->display->display_options['fields']['field_staff_photo']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_photo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_staff_photo']['settings'] = array(
+    'image_style' => 'artist_thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Job titles */
+  $handler->display->display_options['fields']['field_staff_job_titles']['id'] = 'field_staff_job_titles';
+  $handler->display->display_options['fields']['field_staff_job_titles']['table'] = 'field_data_field_staff_job_titles';
+  $handler->display->display_options['fields']['field_staff_job_titles']['field'] = 'field_staff_job_titles';
+  $handler->display->display_options['fields']['field_staff_job_titles']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_job_titles']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_job_titles']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_staff_job_titles']['multi_type'] = 'ul';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Read Bio';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'artist_roster:panel_pane_4';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'staff_member' => 'staff_member',
+  );
+
+  /* Display: Sorting pane for Staff */
+  $handler = $view->new_display('panel_pane', 'Sorting pane for Staff', 'panel_pane_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Reorder Staff Members';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_artist_photo' => 'field_artist_photo',
+    'title' => 'title',
+    'field_artist_subtitle' => 'field_artist_subtitle',
+    'field_artist_website_link' => 'field_artist_website_link',
+    'view_node' => 'view_node',
+    'draggableviews' => 'draggableviews',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_artist_photo' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_artist_subtitle' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_artist_website_link' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'view_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'draggableviews' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Drag each staff member up or down to reorder list.';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Draggableviews: Content */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'staff_member' => 'staff_member',
+  );
   $export['artist_roster'] = $view;
 
   $view = new view();
@@ -352,6 +517,7 @@ function andersenreps_artist_views_default_views() {
     'image_style' => 'slideshow_block',
     'image_link' => 'content',
   );
+  $handler->display->display_options['fields']['field_sideshow_image']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_sideshow_image']['delta_offset'] = '0';
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';

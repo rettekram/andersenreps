@@ -173,17 +173,17 @@ body.admin-menu {
 	display: none;
 	position: absolute;
 	margin: 0px 0 0 0;
-	padding: 5px 0 5px 0;
-	width: 150px;
+	padding: 10px 0 5px 0;
+	min-width: 150px;
 }
 #navigation .block-menu-block ul ul li {
 	float: none;
+	background-color: #87191a;
 	margin: 0;
 	padding: 0;
 }
 #navigation .block-menu-block ul ul li:hover {
 	border: none;
-	background: none;
 }
 #navigation .block-menu-block ul ul li a {
 	margin: 0;
@@ -290,6 +290,9 @@ table.views-view-grid.cols-2 td {
  * Artist Styles (Fields/Views/Panels)
  * 
  */
+.node-type-artist .menu-mlid-427 {
+	border-bottom: 10px solid #87191a;
+}
 
 /* roster list */
 .view-artist-roster td {
@@ -298,17 +301,25 @@ table.views-view-grid.cols-2 td {
 .view-artist-roster tr.row-last td {
 	padding: 0 10px 0 0;
 }
-.view-artist-roster .views-field-field-artist-photo {
+.view-artist-roster .views-field-field-artist-photo,
+.view-artist-roster .views-field-field-staff-photo {
 	float: left;
 	margin-right: 10px;
 }
 .view-artist-roster .views-field-title {
 	font-weight: bold;
 }
-.field-name-field-artist-subtitle {
+.field-name-field-artist-subtitle,
+.field-name-field-staff-job-titles {
 	font-size: 1.2em;
 	font-weight: bold;
 	margin-bottom: 1em;
+}
+.views-field-field-staff-job-titles ul {
+	margin: 0;
+}
+.views-field-field-staff-job-titles ul li {
+	list-style: none;
 }
 
 /* sorting display view */
@@ -328,11 +339,13 @@ table.views-view-grid.cols-2 td {
 }
 
 /* sorting display pane */
-.pane-artist-roster-panel-pane-2 {
+.pane-artist-roster-panel-pane-2,
+.pane-artist-roster-panel-pane-4 {
 	border: 1px dashed #ccc;
 	padding: 0 10px 10px;
 }
-.pane-artist-roster-panel-pane-2 h2.pane-title {
+.pane-artist-roster-panel-pane-2 h2.pane-title,
+.pane-artist-roster-panel-pane-4 h2.pane-title {
 	padding: 0px;
 }
 
@@ -343,6 +356,9 @@ table.views-view-grid.cols-2 td {
  */
 .views_slideshow_cycle_main {
 	padding-top: 40px;
+}
+#views_slideshow_cycle_teaser_section_slideshow-block {
+	height: 700px;
 }
 
 
@@ -366,5 +382,14 @@ table.views-view-grid.cols-2 td {
 	font-weight: bold;
 }
 
-
+/* staff member node */
+.node-type-staff-member .panel-2col-stacked .panel-col-first{
+	width: 40%;
+}
+.node-type-staff-member .pane-node-body p {
+	margin-top: 0;
+}
+.node-type-staff-member .menu-mlid-428 {
+	border-bottom: 10px solid #87191a;
+}
 
