@@ -46,7 +46,7 @@
   <?php print render($page['footer']); ?>
   
   <div id="copyright">
-  	<p>&copy; 2004-<?php print date("Y"); ?> Andersen and Associates, Inc.</p>
+  	<p>&copy; 2004-<?php print date("Y"); ?> Andersen and Associates, Inc. | <a href="http://www.VastArray.com" target="_blank" rel="nofollow" >Designed by VastArray</a></p>
   </div>
   
 </div>
