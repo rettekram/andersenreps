@@ -93,6 +93,9 @@ body.admin-menu {
 	position: relative;
 	top: 30px;
 }
+.node-type-artist #logo-wrapper #logo {
+	left: 220px;
+}
 
 .sidebar-second #content {
 	width: 560px;
